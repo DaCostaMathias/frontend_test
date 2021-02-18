@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <script src="./main.js"> </script>
+
+    <link href="./styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <header class="company-title">
+        <span>Rustr</span>
+        <nav class="float-right">
+            <a href="#">Features</a>
+            <a href="#">Enterprise</a>
+            <a href="#">Support</a>
+            <a href="#">Pricing</a>
+            <a href="#">Sign up</a>
+        </nav>
+
+    </header>
+
+    <!-- <div class="container"> -->
+        <div class="call-to-action" id="headline">
+            <video autoplay muted loop id="myVideo">
+                <source src="./resources/Sea.mp4" type="video/mp4">
+            </video>
+            <div class="content">
+                <h1 class="display-4 ">Punny headline</h1>
+                <p>And an even wittier subheading to boot. Jumpstart your new Rustr service and start growing your
+                    business now.</p>
+                <a href="#">Sign Up Now</a>
+              </div>
+            </div>
+        <div class="call-to-action" id="pricing">
+            <div>
+                <h1 class="display-4">Pricing</h1>
+                <p>
+                    Quickly build your enterprise with these unbeatable customer prices. It's built to grow with you,
+                    and help you grow. Get started with our <b>30</b> days free trial.</p>
+            </div>
+        </div>
+
+        <!-- ideally I would  create proper asset -->
+        <div class="call-to-action row" id="sliderDiv">
+            <div id="pricingCarousel" class="carousel slide col-md-12" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#pricingCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#pricingCarousel" data-slide-to="1"></li>
+                    <li data-target="#pricingCarousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./resources/client.jpg" class="d-block w-100" alt="clientLicenses">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Client License</h5>
+                            <p>
+                            <h1>$0 <small>/ month</small></h1>
+                            <ul>
+                                <li>End to end encryption enabled</li>
+                                <li>Runs on Linux, Windows, OS X, iOS and Android</li>
+                                <li>Integration with 34 partners</li>
+                                <li>Help center access</li>
+                            </ul>
+                            <button type="button" class="btn btn-lg btn-block btn-primary">Sign up for free</button>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./resources/server.jpg" class="d-block w-100" alt="serverLicenses">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Server License</h5>
+                            <p>
+                            <div>
+                                <h1>$15 <small>/ month</small></h1>
+                                <ul>
+                                    <li>Runs on Linux, containers, all major cloud providers</li>
+                                    <li>Up to 1000 clients per server</li>
+                                    <li>Basic Monitoring Integration</li>
+                                    <li>Help center access</li>
+                                </ul>
+                                <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
+                            </div>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./resources/enterprise.jpg" class="d-block w-100" alt="enterpriseLicenses">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Enterprise License</h5>
+                            <p>
+                            <div>
+                                <h1>$29 <small>/ month</small></h1>
+                                <ul>
+                                    <li>Hosted for you in our secure cloud</li>
+                                    <li>Professional team monitoring your service</li>
+                                    <li>Custom domain for your server</li>
+                                    <li>We manage updates for your server</li>
+                                    <li>Priority support</li>
+                                </ul>
+                                <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
+                            </div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#pricingCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#pricingCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+            <div class="calculator"  id="calculator">
+                <div>
+                    <h2 class="display-4">The best pricing model</h2>
+                    <p>
+                        Enter how many endpoints and servers you intend to run, and calculate the TCO of your switch to
+                        Rustr.
+                    </p>
+                </div>
+                <div id="calculator__form">
+                    <!-- I was planning on making this calculator with sliders instead of inputs -->
+                    <dl>
+                        <dt>
+                            <label for="clientLicenses"> # of clients</label>
+                        </dt>
+                        <dd><input id="clientLicenses" name='clientLicenses' value='1' type='number' /></dd>
+                        <dt>
+                            <label for="serverLicenses"># of servers</label>
+                        </dt>
+                        <dd><input id="serverLicenses" name='serverLicenses' value='1' type="number" /></dd>
+                        <dt>
+                            <label for="enterpriseLicenses"># of enterprises</label>
+                        </dt>
+                        <dd><input id="enterpriseLicenses" name='enterpriseLicenses' value='1' type="number" /></dd>
+                    </dl>
+                    <div class="calculator__result">
+                    </div>
+                    <div>
+                        <button class="btn btn-success col-md-12">Reserve Licenses Now</button>
+                    </div>
+                    <div class="spacer">
+                        &nbsp;
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+<footer class="footer">
+    <div>
+        Rustr Inc
+        <small>&copy; 2017-2021</small>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <h5>Features</h5>
+            <ul>
+                <li><a href="#">Cool stuff</a></li>
+                <li><a href="#">Random feature</a></li>
+                <li><a href="#">Team feature</a></li>
+                <li><a href="#">Stuff for developers</a></li>
+                <li><a href="#">Another one</a></li>
+                <li><a href="#">Last time</a></li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <h5>Resources</h5>
+            <ul>
+                <li><a href="#">Resource</a></li>
+                <li><a href="#">Resource name</a></li>
+                <li><a href="#">Another resource</a></li>
+                <li><a href="#">Final resource</a></li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <h5>About</h5>
+            <ul>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Locations</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+</html>

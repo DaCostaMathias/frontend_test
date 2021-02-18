@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    font-family: sans;
+    background-color: orange;
+}
+
+body a {
+    color: white;
+}
+body a:hover {
+    padding: 1em;
+    background-color: orange;
+}
+
+.company-title {
+    font-size: 32px;
+    font-weight: lighter;
+    padding-left: 8px;
+    padding-top: 16px;
+    color: #fff;
+    background-color: black;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+nav a {
+    margin: 8px;
+}
+nav a:hover {
+    color: #fff;
+    padding: 1em;
+    background-color: orangered;
+}
+
+header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+header a {
+    color: #fff;
+
+}
+
+footer {
+    width: 100%;
+    /* margin-top: 120px; */
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75em;
+    font-weight: 100;
+    background-color: black;
+    color: #fff;
+
+}
+footer a {
+     color: #fff;
+
+}
+footer h5 {
+    margin: 0;
+}
+
+.call-to-action {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.call-to-action > div {
+    width: 860px;
+}
+
+.pricing-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.pricing-row div {
+    padding: 16px;
+    margin: 8px;
+}
+
+dl {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+dt {
+    flex-basis: 20%;
+    /*text-align: right;*/
+}
+dd {
+    padding-left: 2px;
+    flex-basis: 70%;
+    flex-grow: 1;
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: lighter;
+}
+
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: orange;
+    width: 100%!important;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#headline {
+    padding-bottom: 2em ;
+    background-color: #eaeaea;
+    width: 100%!important;
+}
+
+#pricing {
+    padding-bottom: 2em ;
+    background-color: #eaeaea;
+    width: 100%!important;
+}
+
+#myVideo {
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+  }
+  
+ 
+  .content {
+    position: fixed;
+    top: 55px;
+    /* background: rgba(0, 0, 0, 0.5); */
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .spacer {
+      height: 10px;
+  }
+ 
